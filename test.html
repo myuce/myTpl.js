@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>test</title>
+</head>
+<body>
+<div id="template"></div>
+<script src="myTpl.js"></script>
+<script>
+var user = {
+	"logged": 1
+}
+var test = {
+	"name": "john",
+	"surname": "doe",
+	"family": [
+		{
+			"name": "jane",
+			"surname": "doe",
+			"relation": "wife"
+		},
+		{
+			"name": "baby",
+			"surname": "doe",
+			"relation": "child"
+		}
+	]
+};
+
+tpl = new myTpl("tpl");
+tpl.load("test","template",test);
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>test</title>
+</head>
+<body>
+<div id="template"></div>
+<script src="myTpl.js"></script>
+<script>
+var tpl = new myTpl("tpl");
+var user = {
+	"logged": 1
+};
+var xhr = new XMLHttpRequest();
+xhr.open("GET","test.json",true);
+xhr.onreadystatechange = function() {
+	if(xhr.readyState == 4) {
+		test = JSON.parse(xhr.responseText);
+		tpl.load("test","template",test);
+	}
+};
+xhr.send();
+</script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+	"name": "john",
+	"surname": "doe",
+	"family": [
+		{
+			"name": "jane",
+			"surname": "doe",
+			"relation": "wife"
+		},
+		{
+			"name": "baby",
+			"surname": "doe",
+			"relation": "child"
+		}
+	]
+}
